@@ -1,0 +1,126 @@
+OPERATOR PRECEDENCE
+
+Operator precedence is the order of evaluation of operators where higher precedence operators are evaluated first. It is a collection of rules that defines which procedure  is to perform first inorder to evaluate expression, particularly noticeable in algebriac expressions. Precedence level of operators are given below in the order of highest to lowest preference.
+
+()   []   ->   .   ::	Function call, scope, array/member access
+unary operators !  ~   -   +   *   &   sizeof   type cast   ++   -- 
+*   /   % MOD	Multiplication, division, modulo
++   -	Addition and subtraction
+<<   >>	Bitwise shift left and right
+<   <=   >   >=	Comparisons: less-than, ...
+==   !=	Comparisons: equal and not equal
+&	Bitwise AND
+^	Bitwise exclusive OR (XOR)
+|	Bitwise inclusive (normal) OR
+&&	Logical AND
+||	Logical OR
+? :	Conditional expression (ternary)
+=   +=   -=   *=   /=   %=   &=   |=   ^=   <<=   >>=	Assignment operators (right to left)
+,	Comma operator
+
+
+
+in the unary operators mentioned above postfix has highest preference than prefix operators.
+All the unary operators are evaluated from right to left.
+Asignment operators are evaluated from right to left.
+All the remaining operators are operated from left to right.
+Paranthesis operator is used to alter the order of evaluation, where all the operations inside them is evaluated first.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ == AND ===
+ ==........ It compares two values that they are equal or not
+ example : asign x=1
+          x == 1 //true
+          x == 2 //false
+          true == 1 // its a boolean exp and it is true
+
+===........ it compares the value that they are equal or not and also looks for same datatype or not
+example : asign x=1
+          x === 1 // true
+          x === 2 // false
+          true === 1// false , true is a string, 1 is a number
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ NULL : 
+ null is an assigned value to a variable to represent no value
+
+ UNDEFINED :
+ a variable that is declared and not been assigned a value.
+
+ example : int a;
+           document.write(a) // undefined
+.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+FOR LOOP :
+It is a tool that we use when we want to create a loop
+syntax: for(exp;condition;inc/dec)
+{
+	statement
+}
+loop repeats until the condition specified evaluates to false
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+WHILE LOOP: 
+
+it is also a loop that repeats to print the statement until the given condition becomes false
+syntax: while(condition)
+            statement
+
+First checks condition and prints statement
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+DO-WHILE LOOP :
+
+Same as WHILE its a loop that repeats to print the statement specified until the given conditions becomes false.
+syntax : do
+         {
+	        statement
+          }            
+            while(condition)
+
+here first prints the statement and then starts checking for condition
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+if condition:
+
+it allows code to print a statement if the given condition is true
+
+      if(condition)
+      {
+         statement
+      }
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+if else :
+
+it allows a code to print a statement if given conditions is true, and if condition is false then it prints else statement
+        if (condition)
+        {
+          statement
+         }  
+         else
+         {
+         statement1
+         }
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+SWITCH CASE
+It is used to perform different events based on different conditions. It is used to select one statement of many blocks of code in execution
+  
+     switch(exp)
+     {
+     case n:
+     code
+     break;
+     case n:
+     code
+     break;
+     default:
+     }
