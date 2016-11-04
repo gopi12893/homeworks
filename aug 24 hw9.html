@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hw9</title>
+</head>
+<body bgcolor="grey">
+<script>
+	var a,b,c,d,e,f,x,y,z;
+	a=5;
+	b=6;
+	c=6;
+	d=7;
+	document.write("a=5,b=6,c=6,d=7 <br>")
+	
+	document.write("simple arithmtic operation <br>x=a+b*c-d<br>")
+	x=a+b*c-d;
+	document.write(x+"<br>")
+
+	document.write("now paranthesis alters the precedence <br>x=(a+b)*c-d<br>")
+	x=(a+b)*c-d;
+	document.write(x+"<br>")
+	document.write("applying all operators, it gives result by the precedence of operators <br> y=[(a+b)*(d-c)+(++a + b--)]%d <br>")
+	
+	y=[(a+b)*(d-c)+(++a + b--)]%d;
+	document.write(y+"<br>")
+	document.write("applying bitwise shift operator <br> z=x<<2 + y>>2 <br>")
+
+	z=x<<2 + y>>2; 
+	document.write(z+"<br>")
+//document.write(b+"<br>")
+	document.write("applying precedence for arithmatic and logical operators <br> e=a&&b+c||d <br>")
+	e=a&&b + c||d;
+	document.write(e+"<br> <br> <br> <br>")
+
+	
+
+</script>
+<script>
+var i,j=0,k;
+document.write(" sum of 3 numbers <br>")
+	document.write("for loop<br>")
+	for(i=1;i<=3;i++)
+	{
+		j=j+i;
+			
+	}
+	document.write(j+"<br>")
+	document.write("while loop <br>")
+	while(j<=3)
+		j=j+1;
+	document.write(j+"<br>")
+	document.write("do while loop <br>")
+	do
+	{
+		j=j+1;
+		document.write(j+"<br><br><br><br><br>")
+	}
+	while(j<=3)
+</script>
+
+<p>Please enter your age </p>
+
+<input id="number" type="text">
+
+<button type="button" onclick="age()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function age() {
+    var g, text;
+
+    
+
+    g = document.getElementById("number").value;
+
+    
+   
+    if (g < 18)
+     {
+       text=" you are minor";
+    }
+     else 
+     {
+       text="you are major";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+<!-- <p>please enter a number 1 to 3</p>
+<input id="ip" type="text" >
+<button onclick="marriage()">clickme</button>
+<p id="status"></p>
+<script>
+function marriage() {
+  var maritalstatus = document.getElementById("ip").value;
+var arr=[single, married, divorced]
+switch(arr[1])
+{
+case single:
+document.write("single");
+break;
+case married:
+document.write("married");
+break;
+case divorced:
+document.write("divorced");
+break;
+default:
+document.write("iam child");
+break;
+}
+// document.getElementById("status").innerHTML = marriage();
+}
+</script> -->
+<script>
+	var arr=[18,20,21];
+	switch (arr[0])
+	{
+		case  18:
+		document.write("you are not married");
+		break;
+		case 20:
+		document.write("you are married");
+		break;
+		case 21:
+		document.write("you r divorced");
+		break;
+		default:
+		document.write("you dont need to marry")
+		break;
+	}
+</script>
+
+
+</body>
+</html>
