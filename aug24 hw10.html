@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hw10</title>
+</head>
+
+<body bgcolor="skyblue">
+<script>
+	var a,b,c,d,e,f;
+	a=5;
+	b=6;
+	c=6;
+	d=7;
+	document.write("a=5,b=6,c=6,d=7 <br>")
+document.write("applying logical and :<br> b&&a = ")
+	e=b&&a;
+	document.write(e+"<br>")
+	document.write("applying logical or : <br>a||b = ")
+	f=a||b;
+	document.write(f+"<br><br><br><br><br>")
+
+
+	</script>
+	<script>
+	document.write("<h1>USING STRING METHODS</h1><br>")
+	document.write("<h3>the two strings are GOPI and KRISHNA</h3><br>")
+	document.write("<h4>reverse of gopi is</h4><br>")
+    var str = "gopi";
+    var str1 = "krishna"
+    var i;
+    
+    for(i=3;i>=0;i--)
+    
+{
+    var a = str.charAt(i)
+   
+    
+    document.write(a)
+}
+document.write("<br>")
+document.write("<h4>concatenation of two strings</h4><br>")
+var c = str.concat(str1)
+document.write(c+"<br>")
+document.write("<h4>gopikrishna starts with g and ends with h</h4> <br>")
+var start = c.startsWith("g")
+var end = c.endsWith("h")
+document.write(start+"<br>")
+document.write(end+"<br>")
+
+document.write("<h4>sum of ascii values of the string GOPI<br></h4>")
+
+var j,k=0;
+for(j=0;j<=3;j++)
+{
+	k=k+str.charCodeAt(j)
+}
+document.write(k+"<br>")
+
+document.write("<h4>p is included in gopi<br></h4>")
+var include = str.includes("p")
+document.write(include)
+
+document.write("<h4>position of h in krishna<br></h4>")
+var index = str1.indexOf("h")
+document.write(index)
+
+document.write("<h4>which string is writen first<br></h4>gopi is written first--- displays -1 <br>if krishna written first----displays 1<br>if both are equal displays 0<br>")
+var compare = str.localeCompare(str1)
+document.write(compare)
+
+document.write("<h4>repeating the string gopi 5 times</h4><br>")
+var rep = str.repeat(5)
+document.write(rep)
+
+document.write("<h4>replacing gopi with narra in gopikrishna</h4><br>")
+var replace = c.replace("gopi","narra")
+document.write(replace)
+
+document.write("<h4>positions where i is located in gopikrishna</h4><br>")
+var search = c.search("i")
+document.write(search+",")
+
+document.write("<h4>selecting a part in gopikrishna</h4><br>")
+var cut = c.slice(3,8)
+document.write(cut)
+
+document.write("<h4>splitting the letters in gopikrishna</h4><br>")
+var seperate = c.split("")
+document.write(seperate)
+
+document.write("<h4>converting gopikrishna to uppercase</h4><br>")
+var upper = c.toLocaleUpperCase();
+document.write(upper)
+
+document.write("<h4>removed white spaces in a given string</h4><br>")
+document.write("<h5>given string is --GOPI-- </h5>")
+var d = "  gopi  "
+var trm = d.trim()
+document.write(trm)
+
+document.write("<h4>changing font style of gopikrishna</h4><br>")
+var bld = c.bold()
+var italic = c.italics()
+document.write(bld+"<br>")
+document.write(italic+"<br>")
+var anc = c.anchor('ngk')
+document.write(anc)
+
+
+
+</script>
+<script>
+	document.write("<h1>USING ARRAY METHODS</h1><br>")
+	var arr = ["a","b","f","h","k"]
+
+	document.write("<h4>array elements are <br></h4>")
+    document.write(arr)
+
+    document.write("<h4>copy within<br></h4>")
+    arr.copyWithin(2,1)
+    document.write(arr+"<br>")
+
+    document.write("<h4>sliced elements<br></h4>")
+    arr.slice(2,4)
+    document.write(arr+"<br>")
+
+    document.write("<h4>adding elements at begining <br></h4>")
+    var add = arr.unshift("z","x")
+    document.write(arr+"<br>")
+
+    document.write("<h4>total elements in array <br></h4>")
+    document.write(add+"<br>")
+
+    document.write("<h4>sorting in order<br></h4>")
+    arr.sort()
+    document.write(arr+"<br>")
+
+    document.write("<h4>removing first element<br></h4>")
+    arr.shift()
+    document.write(arr+"<br>")
+
+    document.write("<h4>removing last element<br></h4>")
+     arr.pop()
+    document.write(arr+"<br>")
+
+    document.write("<h4>adding y and v in between<br></h4>")
+     arr.splice(2,0,"y","v")
+    document.write(arr+"<br>")
+
+    document.write("<h4>reversing the order<br></h4>")
+    arr.reverse()
+    document.write(arr+"<br>")
+
+   </script>
+   
+
+
+
+</body>
+</html>
