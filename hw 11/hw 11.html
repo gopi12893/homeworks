@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hw 11</title>
+</head>
+<body>
+<script>
+document.write("<h3>examples of foreach()<br></h3>")
+document.write("<h4>1.) the elements in given array<br></h4>")
+	var arr = ['a', 'b', 'c'];
+	arr.forEach(function(current_value) 
+	{
+			document.write(current_value);
+			
+		});
+
+	document.write("<h4>2.) finding array elements greater or lesser than 5<br></h4>")
+
+	var arr1 = [5, 7, 1, 9, 8, 5];
+ 
+		var arr3 = arr1.forEach(function(current_value, index, initial_array) {
+			if (current_value > 5) 
+			{
+				// document.write(current_value+'>5 <br>');
+				return current_value+'>5';
+			}
+			else if(current_value < 5)
+			{
+				// document.write(current_value+'<5 <br>');
+			return current_value+'<5';
+			}
+			else
+			{
+				// document.write(current_value+'=5 <br>')
+				return current_value+'=5';
+			}
+		});
+		document.write(arr3)
+
+document.write("<h3>examples of map()<br></h3>")
+document.write("<h4>1.) finding array elements greater or lesser than 5<br></h4>")
+var arr1 = [5, 7, 1, 9, 8, 5];
+ 
+		var arr2 = arr1.map(function(current_value, index, initial_array) {
+			if (current_value > 5) 
+			{
+				return current_value+'>5 <br>';
+			}
+			else if(current_value < 5)
+			{
+				return current_value+'<5 <br>';
+			}
+			else
+			{
+				return current_value+'=5 <br>'
+			}
+		});
+		document.write(arr2)
+
+
+
+</script>
+
+</body>
+</html>
