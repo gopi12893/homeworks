@@ -1,0 +1,34 @@
+SETTER:
+  It is a method for object class, also known as mutator method. It is applied once per instance variable, here new value is assigned to a private valuefor validation.
+
+GETTER:
+  It is also a method known as accessor method, it is also used once per instance variable. it will retrieve a private value.
+
+PRIVATE:
+  it is a member modifier that cannot be used outside of the specified class in a package.
+
+PUBLIC:
+  It can be accessed in any class outside a  package.
+
+PROTECTED:
+  Like public it can be accessed in any class but within a package
+
+
+STATIC:
+  It is an access modifiers applied to instance variables in methods. it does not requires an object to call and print variables.
+
+FINAL:
+  it is also an access modifiers applied to all constructers, objects, and classes.
+  it cant be reasigned
+  it cant be override
+  It works as constant 
+
+IMMUTABLE OBJECTS:
+  any object that doesnt change its state after once they are created. they can not be modified, used in concurrent applications, no thread interference.(thread safe)
+
+PASS BY VALUE:
+  passing the arguments to the functions, by calling the function.
+  here the value is copied and passed to the methods, and where the original value remains same.
+
+PASS BY REFERENCE:
+  passing the arguments to any function by calling the function to a method, the arguments are passed through the reference of address, hence the original value is changed.
