@@ -9,4 +9,4 @@ CONTINUE:
 
 BREAK in SWITCH CASE:
 switch case starts executing the statements from where the condition matches,
-it executes until break encounters. stops the iterations where the break encounters... usually switch case is writen for single statement execution therefore break is used after each statement. There is a default:break in the last of all the cases, it isused to exit the switch iterations.
+it executes until break encounters. stops the iterations where the break encounters... usually switch case is writen for single statement execution therefore break is used after each statement. There is a default:break in the last of all the cases, it is used to execute the default statement if there is no case match and exit the switch iterations.
