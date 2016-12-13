@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homework13</title>
+</head>
+<body>
+	<script>
+		var a=2;
+		var b= 
+		 {
+		     	fstname:'gopi',
+			     lstname:'narra',
+			     a:21,
+			     myage:function()
+				        {return this.a;  }
+		         }
+		         document.write(b.fstname+"<br>")
+		         document.write(b.lstname+"<br>")
+		document.write(b.myage());
+		var numofyears=b.myage; 
+		document.write(numofyears()+"<br>");
+		document.write(numofyears.call(b)+"<br>");
+		document.write(numofyears.call({a:22})+"<br>");
+		document.write(numofyears.apply({a:23})+"<br>");
+
+		function joining(x,y,z)
+		{
+			return this.u+this.v+x+y+z;
+		}
+		var c=
+		{
+			u:'a',
+			v:'b' 
+		}
+			document.write(joining.call(c,'c','d','e')+"<br>");
+				document.write(joining.apply(c,['c','d','e'])+"<br>");
+		var d=joining.bind(c)
+			document.write(d('e','d','c'));
+	</script>
+
+</body>
+</html>
