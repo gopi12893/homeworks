@@ -25,17 +25,17 @@
 
 		function joining(x,y,z)
 		{
-			return this.u+this.v+x+y+z;
+			return this.i+this.j+x+y;
 		}
 		var c=
 		{
-			u:'a',
-			v:'b' 
+			i:'g',
+			j:'o' 
 		}
-			document.write(joining.call(c,'c','d','e')+"<br>");
-				document.write(joining.apply(c,['c','d','e'])+"<br>");
+			document.write(joining.call(c,'p','i')+"<br>");
+				document.write(joining.apply(c,['p','i'])+"<br>");
 		var d=joining.bind(c)
-			document.write(d('e','d','c'));
+			document.write(d('p','i'));
 	</script>
 
 </body>
