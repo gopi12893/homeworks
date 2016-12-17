@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>selectors</title>
+	</head>
+	<body>
+	
+
+
+
+    <div>
+    <p> <h1>GOPI KRISHNA NARRA</h1></p>
+</div>
+<div class="class1"><b>INFORMATION 1</b><br><br><br>
+<div class="class2">
+    <b>CHILDHOOD :</b>
+   <p class="class3">school : ccreddy<br>city : kodad<br>state : telangana<br></p>
+   
+</div><br><br><br>
+    
+</div>
+<br>
+
+ <div class="class4"><b>INFORMATION 2</b><br>
+<div class="class2">
+    <b>INTERMEDIATE :</b>
+   <p class="class3">SCHOOL : Narayana <br>city : Vijayawada<br>state : Andhrapradesh<br></p>
+   
+</div><br>
+    
+</div>
+
+<br>
+    
+
+
+    <div>
+    <p><b>UNDERGRADUATION : </b><br>Hyderabad</p>
+    <p><b>MASTERS : </b><br>University of Central Missouri<br>Kansas<br>USA</p>
+    </div>
+
+    
+
+        
+
+		
+		<h4>text input</h4><input type="text"><br>
+		<h4>radio input</h4><input type="radio"><br>
+		
+		<h4>checkbox</h4><input type="checkbox"><br>
+		<h4>date input</h4><input type="date"><br>
+		<h4>no type</h4><input><br>
+		
+		<h4>weeks</h4><input type="week"><br>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+		
+
+<script>
+			$('*').css('background-color','lightblue');
+
+            $('.class1').css('border', '3px solid black');
+
+             $('.class1').css('background-color','green');
+
+              $('.class2').css('background-color','white');
+
+             $('.class3').css('background-color','yellow');
+
+             $('.class4').css('border', '3px solid black');
+
+              $('.class4').css('background-color','blue');
+
+           $('.class2').css('border', '3px solid red');
+
+          $("[type*=text]").css('background-color','red');
+
+          $('p:first-child').css('border', '3px solid blue');
+
+          $('p:first-child').css('background-color','yellow');
+
+          $('p:last-child').css('border', '3px solid green');
+
+          $('p:last-child').css('background-color','yellow');
+
+          $(':header').css('color','red');
+
+          $("[type=date]").css('color','hsl(0, 100%, 50%)');
+
+          $("[type=date]").css('background-color','yellow');
+
+
+
+
+          //$('div:eq(0)').css('background-color','black');
+
+           //$('p').css('background-color','red');
+		</script>	
+
+	</body>
+</html>
