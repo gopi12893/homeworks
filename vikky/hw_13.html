@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home work 13</title>
+</head>
+<body>
+<h1>Call Apply and Bind</h1>
+<div id="hey">
+
+</div>
+<script type="text/javascript">
+
+var obj1={num: 5};
+
+function addToThis(a,b,c){
+      d = this.num;
+     e = d + a + b + c;
+	document.write(e);
+}
+
+addToThis.call(obj1,10,20,30);	
+
+
+var arr=[10,20,30]
+addToThis.apply(obj1,arr);	
+
+var bound = addToThis.bind(obj1,10,20,30);
+bound();
+</script>
+</body>
+</html>

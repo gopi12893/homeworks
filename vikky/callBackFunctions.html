@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call back funcctions</title>
+</head>
+<body>
+<script type="text/javascript">
+		
+	  function sum(a,b,doLater){
+
+	alert("sum of numbers is : " +(a+b));
+	doLater(a,b);
+	}				
+	
+
+	 function product(p,q){
+
+	alert("sum of numbers is : " +(p*q));
+	}	
+
+	
+
+document.write(sum(10,20,product));
+
+
+
+
+
+
+(
+	function sum(a,b,doLater){
+
+	alert("sum of numbers is : " +(a+b));
+	doLater(a,b);
+	}		
+
+	)();
+
+
+
+(
+	function product(p,q){
+
+	alert("sum of numbers is : " +(p*q));
+	}
+	)(sum(10,20,product));
+
+
+
+
+
+</script>
+</body>
+</html>
