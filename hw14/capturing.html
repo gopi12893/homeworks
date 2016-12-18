@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event capturing</title>
+	<style type="text/css" >
+
+.divstyle{
+display:table-cell;
+background-color: green;
+border: 20px solid red;
+padding: 50px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>EVENT CAPTURING</h1>
+
+<br>
+<br>
+<p class="class1">
+	click on any box, it shows what are the details are in the boxes from top to the box you have clicked.
+
+	</p>
+	
+<div id="FIRSTNAME" class="divstyle">
+<p>GOPI </p>
+          <div id="MIDDLENAME" class="divstyle">
+			<p>KRISHNA</p>
+		
+			<div id="LASTNAME" class="divstyle">
+			  <p>NARRA</p>	
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		var divs = document.getElementsByTagName("div");
+         for(var i=0; i<divs.length; i++)
+          {
+
+      divs[i].addEventListener("click", highlightThis, true)
+
+          }
+
+      function highlightThis()
+      {
+      	alert(this.getAttribute("id"));
+      	
+      }
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<script>
+	$(':header').css('color','red');
+		$('*').css('background-color','lightblue');
+		 $('div p').css('background-color','green');
+		 
+		  $('.class1').css('background-color','yellow');
+	</script>
+
+	
+</body>
+</html>

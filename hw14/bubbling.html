@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event bubbling</title>
+
+	<style type="text/css" >
+
+.styleClass {
+display:table-cell;
+background-color: green;
+border: 20px solid red;
+padding: 50px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>EVENT BUBBLING</h1>
+<br>
+<br>
+
+	<p class="class1">
+	click on CLICKHERE to know the details of each box from inner box to outer box
+
+	</p>
+	<p class="class1">or click on any box to know what the particular box is mentions about</p>
+
+	
+
+	
+<br>
+<br>
+
+<div class="styleClass" onclick="alert('first name')">
+<p>GOPI KRISHNA</p>
+		
+			<span class="styleClass" onclick="alert('last name')">narra
+				<input type="button" value="click here" onclick="alert('details')"/>
+			
+		</span>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+	<script>
+	$(':header').css('color','red');
+		$('*').css('background-color','lightblue');
+		 $('div p').css('background-color','green');
+		  $('span').css('background-color','green');
+		  $('.class1').css('background-color','yellow');
+	</script>
+</body>
+
+</html>
