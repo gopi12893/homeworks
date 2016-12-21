@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.1.js">
+	
+</script>
+<script>
+	
+
+	jQuery.ajax({
+			url : 'http://rest.learncode.academy/api/johnbob/friends/5859de6a93399a010063e23e',
+			method : 'DELETE',
+			
+	        success : function(data)
+	        {
+	        	console.log(data);
+
+	        },
+	        error : function(xhr)
+	        {
+              console.log(xhr);
+	        }
+		})
+</script>
+</body>
+</html>
