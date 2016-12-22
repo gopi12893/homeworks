@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+<h1>TWO WAY DATA BINDING</h1>
+<h1>ENTER YOUR DETAILS</h1>
+
+<div ng-app="app" >
+<p class="class1">
+	enter your firstname: <input ng-model="firstname"><br>
+	enter your lastname: <input ng-model="lastname"><br>
+	enter mobile number: <input ng-model="number"><br>
+	enter email address: <input ng-model="mail"><br>
+	enter home address: <input ng-model="home"><br>
+</p>
+	
+	<hr>
+	<details>
+  <summary class="class3">DETAILS PREVIEW</summary>
+  <p class="class2"> <br><br><br><br>
+  firstname is : <span ng-bind="firstname" ></span><br>
+	lastname is : <span ng-bind="lastname" ></span><br>
+	mobile is : <span ng-bind="number" ></span><br>
+	mail id  : <span ng-bind="mail" ></span><br>
+	home : <span ng-bind="home" ></span><br>
+  </p>
+  
+</details>
+	
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+ <div>
+ 	
+ </div>
+ <script>
+ 	angular.module('app',[])
+
+ 	$('*').css('background-color','lightblue');
+$('.class1').css('border', '3px solid black');
+$('.class2').css('border', '3px solid black');
+
+	
+	 $(':header').css('color','red');
+	 $('span').css('color','red');
+	 $('.class1').css('background-color','green');
+	 $('.class2').css('background-color','yellow');
+	 $('.class3').css('background-color','green');
+	
+ </script>
+</body>
+</html>
+<script>
+
+</script>
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bindings</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<!-- <script type="text/javascript" src="binding.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	
+</head>
+
+<body ng-app="app">
+<script>
+	var app = angular.module("app", []);
+app.controller('ctrl', ['$scope', function($scope)
+{
+	$scope.a = 1;
+	$scope.b = 2;
+
+	$scope.doublesum = function()
+	{
+		$scope.a = $scope.a*2;
+		$scope.b = $scope.b*2;
+        $scope.add = parseInt($scope.a) + parseInt($scope.b);
+
+	};
+}])
+</script>
+
+<h1>one way databinding</h1>
+<div ng-controller="ctrl">
+	<div>
+		value of a is {{a}}<br>
+		value of b is {{b}}<br>
+	</div>
+	
+	<p class="class1">click on button continuously <br>the function iterates everytime when u clicked</p>
+	<h3>addition of numbers after making double</h3>
+	<button ng-click="doublesum()">click for result</button>
+	<br>
+	<br>
+<div class="class2">
+	sum={{add}}
+</div>
+	
+	<hr>
+
+	<hr>
+<h1>one time data binding</h1>
+<p>even after doubling the numbers <br>if we want to use the initial value of "a" then one time databinding is used</p>
+a= {{::a}}
+</div>
+<script>
+$('*').css('background-color','lightblue');
+	$('p').css('background-color','yellow');
+	 $(':header').css('color','red');
+	 $('.class1').css('background-color','yellow');
+	 $('.class2').css('background-color','green');
+	  $("[type=button]").css('color','blue');
+</script>
+</script>
+
+</body>
+</html>
