@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</head>
+<body >
+<h1>SHARED SCOPE</h1>
+<h4>initial scope values that are assigned in the module or controler are shared in the newly created directive <br> even if there are any changes made anywhere then it applied to the parent scope also as it is shared</h4>
+<div ng-app="myapp">
+    <div ng-controller="Ctrl">
+    controller: a = {{a}}, b = {{b}}<br>
+     modify a: <input ng-model="a"/><br>
+     <button ng-click="replace()">replace b</button>
+     <hr>
+        directive1: <div dir1></div>
+        
+      
+	</div>
+</div>
+<script>
+	angular.module('myapp',[]);
+	angular.module('myapp').controller('Ctrl', function($scope){
+		$scope.a = 1;
+		$scope.b = 2;
+		$scope.replace = function(){
+			$scope.b = 3
+		}
+		
+	})
+	angular.module('myapp').directive('dir1', function(){
+		
+		return{
+			restrict: 'EACM',
+			template: '<div> a = {{a}}, b = {{b}} </div> <br>modify a: <input ng-model="a"/> <br> <button ng-click="replace()">replace b</button>'
+
+		}
+	})
+
+	$(':header').css('color','red');
+	$('*').css('background-color','lightblue');
+
+</script>
+
+
+</body>
+</html>
