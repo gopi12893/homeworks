@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bindings</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="binding.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    
+</head>
+
+<body ng-app="app">
+<script>
+    angular.module("app", []);
+angular.module("app").controller('ctrl', ['$scope', function($scope)
+{
+    $scope.members = [
+         { name:'gopi', lastname: 'narra'},
+        {name:'sridher', lastname: 'elukanti'},
+        {name:'vikranth', lastname: 'methuku'},
+        {name:'sunil', lastname: 'kotala'},
+        {name:'chanakya', lastname: 'banala'},
+        {name:'harsha', lastname: 'palvay'},
+    ];
+
+    $scope.rent = 1000
+    // $scope.details = [
+    //    { name:'gopi', no:'g'},
+    //     {name:'sridher', no:'h'},
+    //     {name:'vikranth', no:'w'},
+    //     {name:'sunil', no:'a'},
+    // {name:'chanakya', no:'d'},
+    //     {name:'harsha', no:'e'},
+        
+    // ];
+    
+}]);
+</script>
+
+
+<div ng-controller="ctrl">
+    <div>
+        <h1>members in room</h1> <br>
+        <ul>
+            <li ng-repeat="x in members">
+                {{x.name}}
+            </li>
+        </ul>
+        
+    </div>
+    <h1>filter</h1>
+
+    <div>
+    <h3>names contains h in it</h3>
+        <li ng-repeat="name in members | filter : 'h'">
+    {{ name.name }}
+  </li>
+    </div>
+    <hr>
+
+    <p>search by name here:</p>
+
+<input type="text" ng-model="txt">
+
+<ul>
+  <li ng-repeat="names in members | filter:txt">
+    {{ names.name }}
+  </li>
+</ul>
+
+<hr>
+
+<p>search by lastname here:</p>
+
+<input type="text" ng-model="find">
+
+<ul>
+  <li ng-repeat="names in members | filter:find">
+    {{names.lastname}}
+  </li>
+</ul>
+<hr>
+<h1>order by name</h1>
+
+<ul>
+  <li ng-repeat="names in members | orderBy:'name'">
+    {{ names.name + ', ' + names.lastname}}
+  </li>
+</ul>
+
+<h1>order by lastname</h1>
+
+<ul>
+  <li ng-repeat="names in members | orderBy:'lastname'">
+    {{ names.name + ', ' + names.lastname}}
+  </li>
+</ul>
+<hr>
+<h1>currency</h1>
+<p class="class1">rent per person</p>
+<p class="class1">rent={{rent | currency}}</p>
+<hr>
+
+<h1>uppercase</h1>
+<ul>
+  <li ng-repeat="names in members">
+    {{ names.name | uppercase}}, {{names.lastname | uppercase}}
+  </li>
+</ul>
+
+</div>
+
+
+ 
+
+
+<script>
+$('*').css('background-color','lightblue');
+    
+     $(':header').css('color','red');
+     
+     $('.class1').css('color','green');
+      
+</script>
+
+
+
+</body>
+</html>

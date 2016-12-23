@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>reverse string</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="binding.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<div ng-app="MyApp">
+<p>enter any word</p>
+  <input  ng-model="word"/>
+  <p class="class1">Input: {{ word}}</p>
+  <p class="class1">reverse if input: {{ word | reverse }}</p>
+  </div>
+<script>
+angular.module("MyApp", []);
+
+angular.module("MyApp").filter("reverse", function() {
+  return function(rev) {
+    var result = "";
+    rev = rev || "";
+    for (var i=0; i<rev.length; i++) {
+      result = rev.charAt(i) + result;
+    }
+    return result;
+  };
+});
+</script>
+<script>
+$('*').css('background-color','lightblue');
+    
+     $('p').css('color','yellow');
+     
+     $('.class1').css('color','blue');
+      
+</script>
+
+</body>
+</html>
