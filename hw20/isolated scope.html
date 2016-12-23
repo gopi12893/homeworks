@@ -14,6 +14,132 @@
 	<li class="class1">=     <br>used to send an object into the isolated scope from the parent scope</li>
 	<li class="class1">&     <br>used to access any function from parent scope to a directive scope</li>
 </p>
+<h3>EXAMPLE</h3>
+
+
+
+
+
+
+
+<div ng-app="myapp">
+    <div ng-controller="Ctrl">
+    controller: a = {{a}}, b = {{b}}, c = {{c}}, d = {{d}}<br>
+     
+     <hr>
+     <p>there is an isolated scope here</p>
+        directive1: <div dir1 x="gopi", y="krishna" ></div>
+        <h4>using parameter '@'</h4>
+     <p>another isolated scope that doesnot replaces the old x, y values</p>
+        directive2: <div dir2 m="{{a}}", n="{{b}}" ></div>
+        <hr>
+
+        <h4>using parameter '='</h4>
+       
+       controller: name = {{me.name}}, number = {{me.no}}
+       <p>object created as parent is dragged to directive</p>
+        directive3: <div dir3 person = 'me'></div>
+
+<h4>using parameter '&'</h4>
+<p>given c,d values</p>
+       controller: c = {{c}}, d = {{d}}<br>
+       <button ng-click="add(c,d)">click to add</button><br>
+        <p>changing c,d values</p>
+       directive4: <div dir4 sum="add"></div>
+      
+       <p>old values doesnot changes</p>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+<script>
+	angular.module('myapp',[]);
+	angular.module('myapp').controller('Ctrl', function($scope){
+		$scope.a = 1;
+		$scope.b = 2;
+		$scope.c = 3;
+		$scope.d = 4;
+		$scope.add = function(c,d){
+			var r = parseInt(c) + parseInt(d);
+			alert("sum ="+r);
+		}
+
+
+		$scope.me = {
+			name: 'gopi',
+			no: 29
+		};
+		
+		
+	});
+
+	angular.module('myapp').directive('dir1', function(){
+		
+		return{
+			restrict: 'EACM',
+			template: '<div> x = {{x}}, y = {{y}} </div> <br>',
+			 scope:{
+			 	x:'@',
+			 	y: '@'
+			 },
+
+
+		}
+	});
+	angular.module('myapp').directive('dir2', function(){
+		
+		return{
+			restrict: 'EACM',
+			template: '<div> x = {{x}}, y = {{y}} </div> <br>',
+			 scope:{
+			 	x:'@m',
+			 	y: '@n'
+			 }
+
+		}
+	});
+
+
+	angular.module('myapp').directive('dir3', function(){
+		
+		return{
+			restrict: 'EACM',
+			template: '<div> myname = {{person.name}}, number = {{person.no}} </div> <br>',
+			 scope:{
+			 	person: '='
+			 }
+
+		}
+	});
+
+
+	angular.module('myapp').directive('dir4', function(){
+		
+		return{
+			restrict: 'EACM',
+			template: '<div>c={{c}},<br>d={{d}}<br>c: <input ng-model="c"/>, d: <input ng-model="d"/><br><button ng-click="sum()(c,d)">sum</button></div> <br>',
+			 scope:{
+			 	sum: '&'
+			 }
+
+		}
+	});
+
+
+
+	
+
+
+
+	
+</script>
 
 <script>
 	$('*').css('background-color','lightblue');
