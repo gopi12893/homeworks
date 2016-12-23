@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>isolated scope</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+<h1>ISOLATED SCOPE</h1>
+<P>the scope written in a newly created directive does not shares the values of a parent scope.<br>thereis individuality<br>but, communication between them exists to access the parent scope , by using scope parameters given below</P>
+<p >
+<h4>parameters</h4>
+	<li class="class1">@  <br>  passes the string value to the directive scope from the parent scope</li>
+	<li class="class1">=     <br>used to send an object into the isolated scope from the parent scope</li>
+	<li class="class1">&     <br>used to access any function from parent scope to a directive scope</li>
+</p>
+
+<script>
+	$('*').css('background-color','lightblue');
+	$('p').css('background-color','yellow');
+	 $(':header').css('color','red');
+	
+	 $('.class1').css('color','blue');
+	  
+</script>
+
+</body>
+</html>
