@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inherited</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+<h1>INHERITED SCOPE</h1>
+<p>a child scope that is within the parent scope<br>all parent scope members can be accessed by child scope</p>
+<h1>EXAMPLE</h1>
+
+<h3>parent scope, controller</h3>
+
+
+<div ng-app="myapp">
+    <div ng-controller="Ctrl">
+    controller1: a={{a}}, b={{b}}<br>
+    modify a=<input ng-model="a"/>
+    <p>if we modify here there is also a modification in the child 'a' automatically, <br> because it is a inherited child</p>
+
+    <hr>
+   <h3>inherited scope(child) is included here</h3>
+   <p>it have its own values c,d and also accesses parent values a,b</p>
+
+	<div ng-controller="Ctrl1">
+	controller1: a={{a}}, b={{b}}<br>
+    controller2: c={{c}}, d={{d}}<br>
+    modify a=<input ng-model="a"/>
+	</div>
+	<p>if we modify parent value in child here there is only modification in of a in child only</p>
+	</div>
+
+	
+</div>
+<script>
+	angular.module('myapp',[]);
+	angular.module('myapp').controller('Ctrl', function($scope){
+		$scope.a = 1;
+		$scope.b = 2;
+
+		
+	})
+	angular.module('myapp').controller('Ctrl1', function($scope){
+		$scope.c = 1;
+		$scope.d= 2;
+		
+	});
+	// angular.module('myapp').controller('Ctrl1', function($scope){
+	// 	$scope.c = 1;
+	// 	$scope.d= 2;
+		
+	// });
+
+	// angular.module('myapp').directive('dir1', function(){
+		
+	// 	return{
+	// 		restrict: 'EACM',
+	// 		template: '<div> x = {{x}}, y = {{y}} </div> <br>',
+	// 		 scope:{
+	// 		 	x:'@',
+	// 		 	y: '@'
+	// 		 },
+
+
+	// 	}
+	// });
+</script>
+
+<script>
+	$('*').css('background-color','lightblue');
+	$('p').css('background-color','yellow');
+	 $(':header').css('color','red');
+	
+	 $('.class1').css('color','blue');
+	  
+</script>
+</body>
+</html>
