@@ -1,0 +1,8 @@
+
+factory and service are known for the types of custom services
+factory : includes the object and the members included in it to organise a controller
+service : includes only the members to organise controller 
+
+
+factory : singleton service
+service : singleton service
