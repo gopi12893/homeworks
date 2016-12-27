@@ -10,20 +10,21 @@
 <script>
 	
 
-	jQuery.ajax({
-			url : 'http://rest.learncode.academy/api/johnbob/friends/5859de6a93399a010063e23e',
-			method : 'DELETE',
-			
-	        success : function(data)
-	        {
-	        	console.log(data);
-
-	        },
-	        error : function(xhr)
-	        {
-              console.log(xhr);
-	        }
-		})
+	var data = {
+				name : 'put ', 
+				age : 5
+			}
+			jQuery.ajax({
+				url : 'http://rest.learncode.academy/api/johnbob/friends/586149388b3ece010076aa6a', 
+				method : 'PUT',
+				data : data,
+				success : function(data) {
+					console.log(data);
+				},
+				error : function(xhr){
+					console.log(xhr);
+				}
+			})
 </script>
 </body>
 </html>
