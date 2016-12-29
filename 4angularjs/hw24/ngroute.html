@@ -1,0 +1,119 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js" ></script>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body ng-app="app">
+
+
+    <div  class="row">
+        <div  class="col-sm-15 well">
+          <h1><marquee>federal soft systems</marquee></h1>
+        </div>     
+    </div>
+    <hr>
+    <div align="center" class="row">
+        <div class="col-sm-12 well" >           
+            
+               <span> <a href='#/first-msg'>about</a></span>
+               <span> <a href='#/second-msg'>facilities</a></span>
+               <span> <a href='#/third-msg'>gallery</a></span>
+                <span> <a href='#/fourth-msg'>rank</a></span>
+                
+               <hr>
+              
+    
+</div>
+        
+        </div>
+        
+        <div class="row">
+        <div class="col-sm-9 well" style="height:100%"> 
+            <div class="class1" style="float: left;" ng-view></div>
+        </div>
+    </div>
+
+    <script>
+        angular.module('app', ['ngRoute']);
+ 
+angular.module('app', ['ngRoute']).config(['$routeProvider', function($routeProvider){
+    $routeProvider
+    .when('/first-msg', {
+        controller: 'message1',
+        template: '<div>federal soft systems<br>Delivering competitiveness is what Federal Soft Systems Inc. brings to the table when it takes on any assignment. Its vast repertoire of competencies begin from strategy consulting, that factors in the client�s current and future competitive scenario, and then goes on to tailor IT solutions and services that meets today�s as well as tomorrow�s business needs. The skill-set of Federal Soft Systems span key verticals and cuts a swathe across those with a sweep of horizontal solutions an enviable list of loyal clients, who have regularly sought our services, are living proof of the Federal Soft Systems edge. It is their testimonials and our growing list of competencies that is helping to enlarge the list of clients every day.</div>'
+         
+        
+    })
+     .when('/second-msg', {
+        controller: 'message1',
+        template: '<div><ul><li>internships</li><li>accomodation</li><li>technical training</li><li>jobs</li></ul></div>'
+         
+        
+    })
+      .when('/third-msg', {
+        controller: 'message1',
+        template: '<div><img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAfwAAAAJDBlNzAxYjgwLWNiMTUtNDc2Yi04N2UxLTJmMGFjMmU5ODFlZg.png"><br></div>'
+         
+        
+    })
+      .when('/fourth-msg', {
+        controller: 'message1',
+        template: '<div>universal rank = {{a}}</div>'
+         
+        
+    })
+      .when('/',{
+       template: '<strong><img src="https://s-media-cache-ak0.pinimg.com/originals/a7/62/fd/a762fd7e68de320f7b6d3e765e7bd632.jpg" style="width:304px;height:228px;"></strong>'  
+         })
+}]);
+
+angular.module('app').controller('message1', ['$scope', function($scope){
+   $scope.a = 1;
+  
+ }]);
+
+//     .when('/second-msg', {
+//         templateUrl: '<div> this is from msg2 template c = {{c}}, d = {{d}}</div>',
+//         controller: 'message2'
+//     })
+//     .when('/third-msg', {
+//         template: '<strong>this is third message (with no template)</strong>',
+//         //redirectTo: '/first-msg' //redirects to this route (no template shown) - optional
+//         redirectTo: function(params, path, search){ //just another way of redirection
+//             // console.log(params);
+//             // console.log(path);
+//             // console.log(search);
+//             alert('Sorry! not implemented yet...will take you to first message now');
+//             return '/first-msg';
+//         }
+//     })
+//     .when('/',{
+//         template: '<strong>click one of the links from left panel </strong>'
+//     })
+//     .otherwise({
+//         template: '<strong>No content available here..click one of the links from left panel</strong>'
+//     });
+//     //.otherwise('/') //or redirect to root
+// }]);
+ 
+ 
+// app.controller('message2', ['$scope', function($scope){
+//     $scope.c = 10;
+//     $scope.d = 20;
+
+    </script>
+    <script>
+$('*').css('background-color','lightblue');
+
+    
+     $(':header').css('color','red');
+     
+     $('.class1').css('border', '3px solid black');
+     $('.class1').css('background-color','green');
+       $('.class1').css('width','50%');
+        $('.class1').css('height','100%');
+</script>
+</body>
+</html>
